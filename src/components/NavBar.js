@@ -1,13 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RiMenu3Fill } from "react-icons/ri";
 
 
 
 const NavBar = () => {
     const [openMenu, setOpenMenu] = useState(false);
+    const [stickyNav, setStickyNav] = useState(false);
+
+    const changeNavBackground = () => {
+        if(window.scrollY >=57) {
+            setStickyNav(true)
+        } else {
+            setStickyNav(false)
+        }
+    };
+
+    useEffect(() => {
+        changeNavBackground();
+        window.addEventListener("scroll", changeNavBackground);
+        return () => {
+          window.removeEventListener("scroll", changeNavBackground);
+        };
+      }, []);
 
     return (
-        <div className='bg-[#e0e0e0] flex justify-between p-4 text-[16px] font-bold border-b border-b-[#241f13]'>
+        <div className={stickyNav?  'bg-[#F3F3F3] flex justify-between p-4 text-[16px] font-bold border-b border-b-[#241f13] fixed top-0 z-50 w-full': 'bg-white flex justify-between p-4 text-[16px] font-bold border-b border-b-[#241f13]'}>
             <div>
                 <h1>Portfolio</h1>
             </div>

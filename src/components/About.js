@@ -1,5 +1,6 @@
 import Pic1 from '../assets/image/pic1.JPG';
 
+
 const About = () => {
     return ( 
         <div className='p-6 sm:p-10 '>

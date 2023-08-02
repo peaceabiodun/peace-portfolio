@@ -11,7 +11,7 @@ const Work = () => {
                 <Carousel nextArrow={false} prevArrow={false}
                     className='w-[100%] sm:w-[80%] ' 
                     navigation={({ setActiveIndex, activeIndex, length }) =>(
-                    <div className="absolute bottom-0 left-2/4 z-50 flex -translate-x-2/4 gap-2 bg-white">
+                    <div className="absolute bottom-0 left-2/4 z-30 flex -translate-x-2/4 gap-2 bg-white">
                     {new Array(length).fill("").map((_, i) => (
                       <span
                         key={i}

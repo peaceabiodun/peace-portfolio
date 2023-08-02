@@ -1,16 +1,69 @@
+import { motion } from "framer-motion";
 import { SiTypescript } from "react-icons/si";
-import {FaGithub, FaLinkedin, FaTwitter,FaHtml5, FaCss3, FaJsSquare,
-FaReact, FaNode} from "react-icons/fa"
+import { FaJsSquare,FaReact, FaNode} from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
-import { MdEmail, MdCss } from "react-icons/md";
 import { SiTailwindcss} from "react-icons/si";
+import { ReactComponent as Pattern } from '../assets/image/pattern.svg';
+
 
 const MainPage = () => {
     const style = `hidden mt-[-54px] text-[10px] font-semibold absolute text-center z-10 bg-white p-1 border rounded-sm`;
     const mobileStyle = `hidden mt-[-51px] text-[10px] font-semibold absolute text-center z-10 bg-white p-1 border rounded-sm`;
+   
 
     return (
-        <div >
+        <div>
+            <div className="absolute">
+                <motion.div 
+                    initial={{ y: -30 , x: 400}}
+                    whileInView={{ y: 300, opacity: [ 0, 1, 0 ] }}
+                    transition={{repeat: Infinity,  duration: 5 }}
+                    animate={{rotate: [0, 150]}}
+                    className="hidden sm:flex"
+                >
+                    <Pattern />
+                </motion.div>
+
+                <motion.div 
+                    initial={{ y: -30 , x: 30}}
+                    whileInView={{ y: 300, opacity: [ 0, 1, 0 ] }}
+                    transition={{repeat: Infinity,  duration: 5 }}
+                    animate={{rotate: [0, 150, 90]}}
+                    className=""
+                >
+                    <Pattern />
+                </motion.div>
+
+                <motion.div 
+                    initial={{ y: 0 , x: 130}}
+                    whileInView={{ y: 300, opacity: [ 0, 1, 0 ] }}
+                    transition={{repeat: Infinity,  duration: 5 }}
+                    animate={{rotate: [0, 150, 60]}}
+                    className=""
+                >
+                    <Pattern />
+                </motion.div>
+
+                <motion.div 
+                    initial={{ y:-400 , x: 800}}
+                    whileInView={{ y: 200, opacity: [ 0, 1, 0 ] }}
+                    transition={{repeat: Infinity,  duration: 8 }}
+                    animate={{rotate: [0, 150, 90]}}
+                    className="hidden mdLg:flex"
+                >
+                    <Pattern />
+                </motion.div>
+
+                <motion.div 
+                    initial={{ y:-400 , x: 1000}}
+                    whileInView={{ y: -100, opacity: [ 0, 1, 0 ] }}
+                    transition={{repeat: Infinity,  duration: 8 }}
+                    animate={{rotate: [0, 150, 90]}}
+                    className="hidden lg:flex"
+                >
+                    <Pattern />
+                </motion.div>
+            </div>
             <div className='p-6 sm:p-10'>
                 <div className='h-[60vh] flex flex-col justify-center'>
                     <h3 className='text-[16px] font-bold'>Peace Abiodun</h3>
