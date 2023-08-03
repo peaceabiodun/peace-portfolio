@@ -23,7 +23,7 @@ export const projects = [
         image: Farm, 
         title: 'Olabisis Farm', 
         link:'/redirect',
-        description: 'This is a website I am bulding for my mums Farm. You can buy fresh farm and livestock produce directly from the website'
+        description: "This is a website I am bulding for my mum's Farm. You can buy fresh farm and livestock produce directly from the website from any loaction in Nigeria."
     },
 
 ];

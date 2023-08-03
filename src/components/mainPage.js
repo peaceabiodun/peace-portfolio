@@ -15,7 +15,7 @@ const MainPage = () => {
         <div>
             <div className="absolute">
                 <motion.div 
-                    initial={{ y: -30 , x: 400}}
+                    initial={{ y: -100 , x: 400}}
                     whileInView={{ y: 300, opacity: [ 0, 1, 0 ] }}
                     transition={{repeat: Infinity,  duration: 5 }}
                     animate={{rotate: [0, 150]}}
@@ -25,7 +25,7 @@ const MainPage = () => {
                 </motion.div>
 
                 <motion.div 
-                    initial={{ y: -30 , x: 30}}
+                    initial={{ y: -100 , x: 30}}
                     whileInView={{ y: 300, opacity: [ 0, 1, 0 ] }}
                     transition={{repeat: Infinity,  duration: 5 }}
                     animate={{rotate: [0, 150, 90]}}
@@ -66,8 +66,8 @@ const MainPage = () => {
             </div>
             <div className='p-6 sm:p-10'>
                 <div className='h-[60vh] flex flex-col justify-center'>
-                    <h3 className='text-[16px] font-bold'>Peace Abiodun</h3>
-                    <h1 className='text-3xl font-bold my-2'>Frontend Engineer</h1>
+                    <h3 className='text-[16px] sm:text-xl font-bold'>Peace Abiodun</h3>
+                    <h1 className='text-2xl sm:text-3xl font-bold my-2'>Frontend Engineer</h1>
                     <p className='text-xs sm:text-sm'>And ofcourse, I made this myself!</p>
                 </div>
 

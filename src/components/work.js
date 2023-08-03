@@ -5,7 +5,7 @@ import { projects } from "../utils/data";
 const Work = () => {
     return ( 
         <div className='px-6 sm:px-10 pt-6 sm:pt-10 pb-[60px] ' id='work'>
-            <h1 className='text-lg font-bold text-center mb-4'>My Latest work </h1>
+            <h1 className='text-[16px] font-bold text-center mb-4'>Some of My Latest work </h1>
 
             <div className="flex justify-center">
                 <Carousel nextArrow={false} prevArrow={false}
@@ -25,9 +25,9 @@ const Work = () => {
                 )}>
                     {projects.map((item)=>(
                     <div key={item.id} className='flex flex-col items-center'>
-                        <img src={item.image} alt='' className='w-full h-full border border-black' />
-                        <a href={item.link} className='font-bold text-sm my-3 hover:text-[#8a2159]'>{item.title}</a>
-                        <p className='text-xs max-w-[340px] mb-3'>{item.description}</p>
+                        <a  href={item.link}><img src={item.image} alt='' className='w-full h-full border shadow-md cursor-pointer' /></a>
+                        <a href={item.link} className='font-bold text-sm my-4 hover:text-[#8a2159]'>{item.title}</a>
+                        <p className='text-sm font-medium max-w-[340px] mb-3'>{item.description}</p>
                     </div>
                     ))}
                 </Carousel>
