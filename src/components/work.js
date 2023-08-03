@@ -26,7 +26,7 @@ const Work = () => {
                 )}>
                     {projects.map((item)=>(
                     <div key={item.id} className='flex flex-col items-center'>
-                        <a  href={item.link}><img src={item.image} alt='' className='w-full h-full border shadow-md cursor-pointer' /></a>
+                        <Link  to={item.link}><img src={item.image} alt='' className='w-full h-full border shadow-md cursor-pointer' /></Link>
                         <Link to={item.link} className='font-bold text-sm my-4 hover:text-[#8a2159]'>{item.title}</Link>
                         <p className='text-sm font-medium max-w-[340px] mb-3'>{item.description}</p>
                     </div>
