@@ -7,7 +7,7 @@ const About = () => {
                 <h1 className='text-lg font-bold text-center mb-4'>About Me</h1>
                 <div className='flex flex-col sm:flex-row w-full items-center sm:justify-center gap-10'>
                     <div className='text-xs'>
-                        <img src={Pic1} alt='my-pic' className='min-w-[170px] h-[230px] border-2 border-black' />
+                        <img src={Pic1} alt='my-pic' className='min-w-[170px] h-[260px] border-2 border-black' />
                         <p className='font-bold mt-3'>Peace Abiodun</p>
                         <p className=''>Software Engineer</p>
                     </div>
