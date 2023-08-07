@@ -9,21 +9,21 @@ export const projects = [
         image: Wek, 
         title: 'Wekbod', 
         link: 'https://wekbod.netlify.app/',
-        description: 'This is a web application that connects job seekers to their dream Jobs.'
+        description: 'This web application facilitates the connection between job seekers and their desired positions, helping them find their dream jobs.'
     },
     {
         id: 2, 
         image: Lamore, 
         title: 'Lamore', 
         link: '/redirect',
-        description: 'This is an event management web application that lets you plan your events and connects you to the right vendors seemlessly.'
+        description: 'This is an event management web Platform. You can organize a wide range of events and collaborate with various vendors who provide services tailored to your various event requirements.'
     },
     {
         id: 3, 
         image: Farm, 
         title: 'Olabisis Farm', 
         link:'/redirect',
-        description: "This is a website I am bulding for my mum's Farm. You can buy fresh farm and livestock produce directly from the website from any loaction in Nigeria."
+        description: "I am currently developing a website for my mom's farm. From this platform, you have the convenience of purchasing fresh farm and livestock products, regardless of your location within Nigeria."
     },
 
 ];

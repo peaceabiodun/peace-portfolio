@@ -68,7 +68,7 @@ const MainPage = () => {
                 <div className='h-[60vh] flex flex-col justify-center'>
                     <h3 className='text-[16px] sm:text-xl font-bold'>Peace Abiodun</h3>
                     <h1 className='text-2xl sm:text-3xl font-bold my-2'>Frontend Engineer</h1>
-                    <p className='text-xs sm:text-sm'>And ofcourse, I made this myself!</p>
+                    <p className='text-xs sm:text-sm'>And of course, I made this myself!</p>
                 </div>
 
                 <div className='border-y'>

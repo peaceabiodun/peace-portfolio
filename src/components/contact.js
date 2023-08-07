@@ -51,7 +51,7 @@ const Contact = () => {
           <div className="mx-5 sm:mx-10 mt-5 py-6 sm:py-10 border-t flex flex-col sm:flex-row gap-10 ">
             <div className="flex flex-col w-full ">
               <h2 className="font-bold text-lg">Let’s work together</h2>
-              <p className="text-sm max-w-[90%] my-4">You can reach out to me on any of the platforms below or just send me a message here </p>
+              <p className="text-sm max-w-[90%] my-4">Feel free to contact me through any of the provided platforms, or simply send me a message right here.</p>
               <div className="flex gap-4 my-2">
                 <a href="mailto:abiodunpeace8@gmail.com"><MdEmail size={20} className='cursor-pointer' /></a>
                 <a href="https://www.linkedin.com/in/peaceabiodun/"><FaLinkedin size={20} className='cursor-pointer'/></a>
