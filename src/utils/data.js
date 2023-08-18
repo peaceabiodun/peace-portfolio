@@ -22,7 +22,7 @@ export const projects = [
         id: 3, 
         image: Farm, 
         title: 'Olabisis Farm', 
-        link:'/redirect',
+        link:'https://olabisis-farm.netlify.app/',
         description: "I am currently developing a website for my mom's farm. From this platform, you have the convenience of purchasing fresh farm and livestock products, regardless of your location within Nigeria."
     },
 
