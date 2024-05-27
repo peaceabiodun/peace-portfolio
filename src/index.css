@@ -29,3 +29,7 @@ html {
 #icon:hover + #show {
   display: block;
 }
+
+.bg-main {
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(27, 2, 22));
+}
