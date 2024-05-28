@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Outlet from './components';
 import Redirect from './components/redirect';
 import MainPage from './pages/main-page';
 

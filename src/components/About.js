@@ -1,36 +1,29 @@
-import Pic1 from '../assets/image/pic2.JPG';
+import Pic1 from '../assets/image/pic1.JPG';
 
 const About = () => {
   return (
-    <div className='p-6 sm:p-10 '>
-      <h1 className='text-lg font-bold text-center mb-4'>About Me</h1>
-      <div className='flex flex-col sm:flex-row w-full items-center sm:justify-center gap-10'>
-        <div className='text-xs'>
+    <div className='px-5 sm:px-10 border rounded-xl border-[#5e1b53] '>
+      <div className='flex items-center justify-center w-full mt-[-50px]'>
+        <div className='w-[205px] h-[205px] rounded-full border-4 border-[#f147d55e]'>
           <img
             src={Pic1}
             alt='my-pic'
-            className='min-w-[180px] h-[290px] border-2 border-black'
+            className='w-[200px] h-[200px] object-cover rounded-full border-2 border-[#b93ca467]'
           />
-          <p className='font-bold mt-3'>Peace Abiodun</p>
-          <p className=''>Software Engineer</p>
         </div>
-
-        <div className='max-w-[400px] '>
-          <p className='font-bold text-sm'>Bio:</p>
-          <p className='text-xs sm:text-sm'>
-            {' '}
-            I'm a Frontend Engineer dedicated to building high quality web
-            applications with a focus on scalability and performance. <br />
-            Currently, I work as a Frontend Engineer at Food Court, where I use
-            my experience with JavaScript, TypeScript, ReactJS, Tailwind CSS,
-            Sass, Git and APIs alongside a talented team to deliver seamless
-            user experiences and build innovative solutions that cater to the
-            ever-changing demands of the food industry.
-            <br />
-            When I'm not immersed in work, I love to have a good time, travel
-            and explore.
-          </p>
-        </div>
+      </div>
+      <div className='p-5 sm:p-10 flex flex-col items-center justify-center font-semibold '>
+        <h2 className='text-[#f0ecec] text-lg md:text-2xl'>PEACE ABIODUN</h2>
+        <p className='text-[#d6d0d0] text-sm md:text-lg mt-4 '>
+          Over the past few years, I have dedicated my time to building high
+          quality web applications with React.js, Next.js, and their associated
+          frameworks.
+        </p>
+        <p className='text-[#d6d0d0] text-sm md:text-lg mt-4'>
+          &apos;&apos;The most important thing to me, and The primary reason I
+          do what I do is to help people and businesses, bringing them
+          profitability and happiness with my skills.&apos;&apos;
+        </p>
       </div>
     </div>
   );
