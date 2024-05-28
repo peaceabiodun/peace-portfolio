@@ -1,4 +1,4 @@
-import Pic1 from '../assets/image/pic1.JPG';
+import Pic1 from '../assets/image/pic3.jpeg';
 
 const About = () => {
   return (

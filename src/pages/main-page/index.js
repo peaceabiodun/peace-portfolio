@@ -2,6 +2,8 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import About from '../../components/about';
 import Skills from '../../components/skills';
+import Projects from '../../components/projects';
+import Contact from '../../components/contact';
 
 const MainPage = () => {
   return (
@@ -11,8 +13,12 @@ const MainPage = () => {
           Portfolio
         </div>
         <div className=' flex gap-4 p-3 text-[#f0ecec] bg-[#8d8b8b50] rounded-full text-sm font-semibold '>
-          <p className='hover:text-[#8f3a7a] cursor-pointer'>Projects</p>
-          <p className='hover:text-[#8f3a7a] cursor-pointer'>Get In Touch</p>
+          <a href='#projects' className='hover:text-[#8f3a7a] cursor-pointer'>
+            Projects
+          </a>
+          <a href='#contact' className='hover:text-[#8f3a7a] cursor-pointer'>
+            Get In Touch
+          </a>
         </div>
       </div>
 
@@ -54,6 +60,8 @@ const MainPage = () => {
 
       <About />
       <Skills />
+      <Projects />
+      <Contact />
     </div>
   );
 };

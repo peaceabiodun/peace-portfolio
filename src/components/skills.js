@@ -4,7 +4,6 @@ import { TbBrandNextjs } from 'react-icons/tb';
 import { BsGithub } from 'react-icons/bs';
 
 const Skills = () => {
-  const style = `hidden mt-[-54px] text-[10px] font-semibold absolute text-center z-10 bg-white p-1 border rounded-sm`;
   return (
     <div className='my-10'>
       <h2 className='text-[#f0ecec] text-lg md:text-2xl text-center mb-5 font-semibold'>
