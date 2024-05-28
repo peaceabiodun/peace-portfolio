@@ -1,9 +1,9 @@
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import About from '../../components/about';
 import Skills from '../../components/skills';
 import Projects from '../../components/projects';
 import Contact from '../../components/contact';
+import About from '../../components/about';
 
 const MainPage = () => {
   return (
