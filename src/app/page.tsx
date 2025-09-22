@@ -48,7 +48,7 @@ export default function Home() {
               LINKEDIN
             </Link>
             <Link
-              href='https://github.com/abiodunpeace'
+              href='https://github.com/peaceabiodun'
               rel='noopener noreferrer'
               target='_blank'
               className='hover:text-[#FFFFFF] hover:underline underline-offset-4 hover:text-sm md:hover:text-base transition-all duration-300'
