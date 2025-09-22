@@ -83,12 +83,12 @@ export default function Home() {
               autoPlay
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
-              className='w-full h-full object-cover'
+              className='w-full h-full object-cover brightness-80'
             >
               <source src={'/videos/intro.mp4'} type='video/mp4' />
             </video>
 
-            <div
+            {/* <div
               className='absolute inset-0 z-10'
               style={{
                 background: `linear-gradient(
@@ -99,7 +99,7 @@ export default function Home() {
               #0204026d 85.01%
             )`,
               }}
-            ></div>
+            ></div> */}
 
             {/* Play Icon - shows when not playing and hovering */}
             <IoPlayCircleOutline
@@ -109,7 +109,7 @@ export default function Home() {
                 !isPlaying && isHovering
                   ? 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
                   : 'hidden'
-              } text-[#FFFFFF] z-50 cursor-pointer  transition-all duration-300 text-[#0204026d]`}
+              } text-[#FFFFFF] z-50 cursor-pointer  transition-all duration-300 `}
             />
 
             {/* Pause Icon - shows when playing and hovering */}
