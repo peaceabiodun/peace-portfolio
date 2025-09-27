@@ -80,6 +80,15 @@ export default function Home() {
     }
   };
 
+  // Handle click/tap on video container (for mobile)
+  const handleVideoClick = () => {
+    if (isPlaying) {
+      handlePause();
+    } else {
+      handlePlay();
+    }
+  };
+
   // Cleanup timer on unmount
   useEffect(() => {
     return () => {
@@ -128,6 +137,7 @@ export default function Home() {
             className='border-[0.5px] border-[#FFFFFF75] w-full h-[320px] md:h-[520px] relative'
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onClick={handleVideoClick}
           >
             <video
               ref={videoRef}
@@ -139,6 +149,7 @@ export default function Home() {
               autoPlay
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
+              onClick={handleVideoClick}
               className='w-full h-full object-cover brightness-80'
             >
               <source src={'/videos/intro.mp4'} type='video/mp4' />
@@ -159,7 +170,10 @@ export default function Home() {
 
             {/* Play Icon - shows when not playing and controls are visible */}
             <IoPlayCircleOutline
-              onClick={handlePlay}
+              onClick={(e) => {
+                e.stopPropagation();
+                handlePlay();
+              }}
               size={25}
               className={`${
                 !isPlaying && showControls
@@ -170,7 +184,10 @@ export default function Home() {
 
             {/* Pause Icon - shows when playing and controls are visible */}
             <PiPauseThin
-              onClick={handlePause}
+              onClick={(e) => {
+                e.stopPropagation();
+                handlePause();
+              }}
               size={25}
               className={`${
                 isPlaying && showControls
