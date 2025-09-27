@@ -4,7 +4,7 @@ import Footer from '@/components/footer/page';
 import VennDiagram from '@/components/venn-diagram/page';
 import { projectsData } from '@/utils/data';
 import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { HiArrowLongRight } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -18,20 +18,76 @@ export default function Home() {
   >(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showControls, setShowControls] = useState(true);
+  const hideControlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Function to start the timer that hides controls after 3 seconds
+  const startHideControlsTimer = () => {
+    if (hideControlsTimeoutRef.current) {
+      clearTimeout(hideControlsTimeoutRef.current);
+    }
+    hideControlsTimeoutRef.current = setTimeout(() => {
+      setShowControls(false);
+    }, 3000);
+  };
+
+  // Function to reset the timer and show controls
+  const resetControlsTimer = () => {
+    setShowControls(true);
+    if (hideControlsTimeoutRef.current) {
+      clearTimeout(hideControlsTimeoutRef.current);
+    }
+    if (isPlaying) {
+      startHideControlsTimer();
+    }
+  };
 
   const handlePlay = () => {
     if (videoRef.current) {
       videoRef.current.play(); // Play the video
-      setIsPlaying(!isPlaying); // Toggle the play state
+      setIsPlaying(true); // Set playing state to true
+      setShowControls(true); // Show controls when user interacts
+      startHideControlsTimer(); // Start timer to hide controls
     }
   };
 
   const handlePause = () => {
     if (videoRef.current) {
       videoRef.current.pause(); // Pause the video
-      setIsPlaying(!isPlaying); // Toggle the play state
+      setIsPlaying(false); // Set playing state to false
+      setShowControls(true); // Show controls when user interacts
+      // Clear timer when paused since we don't want to hide controls when paused
+      if (hideControlsTimeoutRef.current) {
+        clearTimeout(hideControlsTimeoutRef.current);
+      }
     }
   };
+
+  // Handle mouse enter - show controls and reset timer if playing
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+    setShowControls(true);
+    if (isPlaying) {
+      resetControlsTimer();
+    }
+  };
+
+  // Handle mouse leave - start timer if playing
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    if (isPlaying) {
+      startHideControlsTimer();
+    }
+  };
+
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (hideControlsTimeoutRef.current) {
+        clearTimeout(hideControlsTimeoutRef.current);
+      }
+    };
+  }, []);
   return (
     <main className='bg-[#0A0A0A] w-full h-full min-h-screen'>
       <div className='max-w-[1000px] mx-auto p-5 md:p-10'>
@@ -70,8 +126,8 @@ export default function Home() {
         <section>
           <div
             className='border-[0.5px] border-[#FFFFFF75] w-full h-[320px] md:h-[520px] relative'
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <video
               ref={videoRef}
@@ -101,23 +157,23 @@ export default function Home() {
               }}
             ></div> */}
 
-            {/* Play Icon - shows when not playing and hovering */}
+            {/* Play Icon - shows when not playing and controls are visible */}
             <IoPlayCircleOutline
               onClick={handlePlay}
               size={25}
               className={`${
-                !isPlaying && isHovering
+                !isPlaying && showControls
                   ? 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
                   : 'hidden'
               } text-[#FFFFFF] z-50 cursor-pointer  transition-all duration-300 `}
             />
 
-            {/* Pause Icon - shows when playing and hovering */}
+            {/* Pause Icon - shows when playing and controls are visible */}
             <PiPauseThin
               onClick={handlePause}
               size={25}
               className={`${
-                isPlaying && isHovering
+                isPlaying && showControls
                   ? 'absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
                   : 'hidden'
               } text-[#FFFFFF] z-50 cursor-pointer transition-all duration-300`}
