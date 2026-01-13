@@ -126,7 +126,7 @@ export default function Home() {
           <p className='text-[#FFFFFFB2] mt-1'>
             " I write code the way I keep my word: clean and reliable.
           </p>
-          <p className='text-[#be06ec] mt-1'>
+          <p className='text-[#e1a4f0] mt-1'>
             I am the engineer you call when 'WORKING' isn't enough."
           </p>
         </section>
