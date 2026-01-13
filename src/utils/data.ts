@@ -19,6 +19,15 @@ export const projectsData = [
   },
   {
     id: 3,
+    title: 'HUAWEI',
+    subtext: 'Huawei Nigeria Enterprise and Project Delivery',
+    description:
+      'I worked as an Engineer at Huawei. I was responsible for project delivery and quality assurance in my department.',
+    image: '/images/huawei.png',
+    link: 'https://e.huawei.com/en/',
+  },
+  {
+    id: 4,
     title: 'REPOSITION',
     subtext: 'Official Reposition Store',
     description:
@@ -26,9 +35,18 @@ export const projectsData = [
     image: '/images/reposition.png',
     link: 'https://www.re-position.co/',
   },
+  {
+    id: 5,
+    title: 'FOURTIDE',
+    subtext: 'Global Store for Mens Clothing',
+    description:
+      'Full-stack development for the brand’s online presence — from design and frontend to backend, analytics, and ongoing maintenance.',
+    image: '/images/fourtide.png',
+    link: 'https://www.fourtide.com/',
+  },
 
   {
-    id: 4,
+    id: 6,
     title: 'FOOD COURT',
     subtext: 'Online Restaurant',
     description:
@@ -37,7 +55,7 @@ export const projectsData = [
     link: 'https://www.getfoodcourt.com/',
   },
   {
-    id: 5,
+    id: 7,
     title: 'ARTICLE',
     subtext: 'Why Typescript is better than JavaScript',
     description:

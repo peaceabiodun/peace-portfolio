@@ -7,9 +7,6 @@ import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import { HiArrowLongRight } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { IoPlayCircleOutline } from 'react-icons/io5';
-import { PiPauseThin } from 'react-icons/pi';
 
 export default function Home() {
   const [isHovering, setIsHovering] = useState(false);
@@ -124,16 +121,25 @@ export default function Home() {
         </header>
 
         <section className='flex flex-col text-sm md:text-lg mt-8 mb-8'>
-          <h1 className='text-[#FFFFFF]'>PEACE ABDIOUN</h1>
+          <h1 className='text-[#FFFFFF]'>PEACE ABIODUN</h1>
           <h2 className='text-[#FFFFFF] mt-2'>Senior Frontend Engineer</h2>
           <p className='text-[#FFFFFFB2] mt-1'>
-            My purpose is simple: Solve problems with intelligence and have a
-            life while at it.
+            " I write code the way I keep my word: clean and reliable.
+          </p>
+          <p className='text-[#be06ec] mt-1'>
+            I am the engineer you call when 'WORKING' isn't enough."
           </p>
         </section>
 
         <section>
-          <div
+          <div className='border-[0.5px] border-[#FFFFFF75] w-full h-[380px] md:h-[620px] relative'>
+            <img
+              src='/images/author1.png'
+              alt='poster'
+              className='object-cover object-center w-full h-full'
+            />
+          </div>
+          {/* <div
             className='border-[0.5px] border-[#FFFFFF75] w-full h-[320px] md:h-[520px] relative'
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -155,20 +161,9 @@ export default function Home() {
               <source src={'/videos/intro.mp4'} type='video/mp4' />
             </video>
 
-            {/* <div
-              className='absolute inset-0 z-10'
-              style={{
-                background: `linear-gradient(
-              180deg,
-              rgba(2, 4, 2, 0.9) 0%,
-              rgba(2, 4, 2, 0.8) 9.56%,
-              rgba(2, 4, 2, 0) 47.81%,
-              #0204026d 85.01%
-            )`,
-              }}
-            ></div> */}
+        
 
-            {/* Play Icon - shows when not playing and controls are visible */}
+            Play Icon - shows when not playing and controls are visible
             <IoPlayCircleOutline
               onClick={(e) => {
                 e.stopPropagation();
@@ -182,7 +177,7 @@ export default function Home() {
               } text-[#FFFFFF] z-50 cursor-pointer  transition-all duration-300 `}
             />
 
-            {/* Pause Icon - shows when playing and controls are visible */}
+            Pause Icon - shows when playing and controls are visible
             <PiPauseThin
               onClick={(e) => {
                 e.stopPropagation();
@@ -195,15 +190,15 @@ export default function Home() {
                   : 'hidden'
               } text-[#FFFFFF] z-50 cursor-pointer transition-all duration-300`}
             />
-          </div>
+          </div> */}
           <div className='flex items-center justify-center'>
             <a
               href='mailto:abiodunpeace8@gmail.com'
               rel='noopener noreferrer'
               target='_blank'
-              className='mt-5 border-[0.5px] border-[#ffffff75] p-2 text-[#ffffff] text-sm w-[150px] h-[36px] cursor-pointer text-center hover:bg-[#773a779a] transition-all duration-300'
+              className='mt-5 border-[0.5px] border-[#ffffff75] p-2 text-[#ffffff] text-sm w-[200px] h-[36px] cursor-pointer text-center hover:bg-[#773a779a] transition-all duration-300 font-bold'
             >
-              SAY HELLO
+              CONTACT ME
             </a>
           </div>
         </section>
@@ -215,7 +210,7 @@ export default function Home() {
         <section>
           <div className='text-[#FFFFFF] text-sm md:text-lg mt-12 flex items-center justify-center gap-4 cursor-pointer transition-all duration-400 ease-in'>
             <h4 className='hover:line-through hover:text-[#be06ec] transition-all duration-300'>
-              SOME OF THE THINGS I'VE DONE
+              WHERE MY WORK IS
             </h4>
             <HiArrowLongRight size={16} />
           </div>
@@ -292,7 +287,7 @@ export default function Home() {
         <section>
           <div className='text-[#FFFFFF] text-sm md:text-lg mt-12 flex items-center justify-center gap-4 cursor-pointer transition-all duration-400 ease-in'>
             <h4 className='hover:line-through hover:text-[#be06ec] transition-all duration-300'>
-              WHAT I'M CURRENTLY READING
+              WHAT I AM READING CURRENTLY
             </h4>
           </div>
 
@@ -309,31 +304,39 @@ export default function Home() {
             className='mt-8'
           >
             <div className='flex w-full'>
-              <div className='w-[40%] h-[200px] sm:h-[370px] transition-all duration-300 relative border-[0.5px] border-[#FFFFFF75]'>
+              <div className='w-[50%] h-[200px] sm:h-[370px] transition-all duration-300 relative border-[0.5px] border-[#FFFFFF75]'>
                 <img
-                  src='/images/book1.png'
-                  alt='book1'
-                  className='w-full h-full object-cover object-center'
+                  src='/images/book2.png'
+                  alt='book2'
+                  className='w-full h-full object-contain object-center'
                 />
                 <div className='absolute inset-0 bg-[#be06ec2d] ' />
               </div>
-              <a
-                href='https://open.substack.com/pub/fishinapool/p/chemistry-needs-contact?utm_campaign=post&utm_medium=web'
-                rel='noopener noreferrer'
-                target='_blank'
-                className='w-[60%] h-[200px] sm:h-[370px] bg-[#be06ec10] hover:bg-[#be06ec38] transition-all duration-300 flex flex-col items-center justify-center border-[0.5px] border-[#FFFFFF75] p-2 cursor-pointer'
-              >
-                <p className='sm:text-base text-sm font-bold text-[#ffffff] text-center'>
-                  Substack
-                </p>
-                <p className='sm:text-sm text-xs font-medium my-1 flex items-center justify-center text-center gap-2 text-[#FFFFFFB2]'>
-                  CHEMISTRY NEEDS CONTACT
-                </p>
-                <p className='text-[10px] text-[#FFFFFFB2] underline underline-offset-4'>
-                  Read
-                </p>
-              </a>
+              <div className='w-[50%] h-[200px] sm:h-[370px] transition-all duration-300 relative border-[0.5px] border-[#FFFFFF75]'>
+                <img
+                  src='/images/book3.png'
+                  alt='book3'
+                  className='w-full h-full object-contain object-center'
+                />
+                <div className='absolute inset-0 bg-[#be06ec2d] ' />
+              </div>
             </div>
+            <a
+              href='https://open.substack.com/pub/fishinapool/p/chemistry-needs-contact?utm_campaign=post&utm_medium=web'
+              rel='noopener noreferrer'
+              target='_blank'
+              className='w-full h-[200px] sm:h-[370px]  bg-[#be06ec38] hover:bg-[#be06ec56] transition-all duration-300 flex flex-col items-center justify-center border-[0.5px] border-[#FFFFFF75] p-2 cursor-pointer'
+            >
+              <p className='sm:text-base text-sm font-bold text-[#ffffff] text-center'>
+                Substack
+              </p>
+              <p className='sm:text-sm text-xs font-medium my-1 flex items-center justify-center text-center gap-2 text-[#FFFFFFB2]'>
+                CHEMISTRY NEEDS CONTACT
+              </p>
+              <p className='text-[10px] text-[#FFFFFFB2] underline underline-offset-4'>
+                Read
+              </p>
+            </a>
 
             <div className='grid grid-cols-2 w-full'>
               <a

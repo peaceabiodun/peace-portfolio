@@ -37,7 +37,7 @@ const labelData = [
     cx: '15%',
     cy: '50%',
     text: 'Frontend Frameworks',
-    area: 'Next.js, React.js, Angular',
+    area: 'Next.js, React.js, Angular, Vite',
     mobileMarginClasses: 'sm:mr-6 md:mr-8',
   },
   {
@@ -51,7 +51,7 @@ const labelData = [
     cx: '50%',
     cy: '85%',
     text: 'Styling Libraries',
-    area: 'CSS, Scss, Tailwind, Styled Components',
+    area: 'CSS, Scss, Tailwind, Styling Libraries',
     mobileMarginClasses: 'mb-2 ml-2 sm:mb-4 md:mb-6',
   },
   {
@@ -105,8 +105,8 @@ const labelData = [
 const VennDiagram = () => {
   return (
     <div className='w-full '>
-      <h3 className='text-center text-[#FFFFFF] text-sm md:text-lg mt-12 mb-6 flex items-center justify-center gap-2'>
-        I KNOW
+      <h3 className='hover:line-through hover:text-[#be06ec] transition-all duration-300 text-center text-[#FFFFFF] text-sm md:text-lg mt-12 mb-6 flex items-center justify-center gap-2'>
+        MY SKILL SET AND TOOLS I WORK WITH
         <HiArrowLongRight size={16} />
       </h3>
 
@@ -136,7 +136,7 @@ const VennDiagram = () => {
                     ease: 'linear',
                   }}
                 />
-                {/* Orange Border Circle */}
+                {/* Border Circle */}
                 <motion.div
                   className='w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] rounded-full border border-[#be06ec] border-opacity-50 absolute top-0 left-0'
                   style={{
@@ -168,13 +168,13 @@ const VennDiagram = () => {
                     transform: 'translate(-50%, -50%)',
                   }}
                 >
-                  <div className='text-center urbanist text-white font-[500] lg:w-[100%] w-[50%] text-[0.7rem] lg:text-[0.9rem] leading-tight'>
+                  <div className='text-center urbanist text-[#e1a4f0] font-semibold lg:w-[100%] w-[50%] text-[0.7rem] lg:text-[0.9rem] leading-tight'>
                     {text}
                   </div>
 
                   {/* Footer text (area) if not the "All Features" */}
                   {text !== 'All Features' && (
-                    <div className='text-center text-white/80 font-[400] mt-2 lg:w-[80%] w-[50%] text-[9px] lg:text-[13px]'>
+                    <div className='text-center text-white/85 font-medium mt-2 lg:w-[80%] w-[50%] text-[9px] lg:text-[13px]'>
                       {area}
                     </div>
                   )}
