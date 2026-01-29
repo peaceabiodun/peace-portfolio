@@ -63,4 +63,13 @@ export const projectsData = [
     image: '/images/ts.png',
     link: 'https://medium.com/@abiodunpeace8/why-typescript-is-better-than-javascript-13126c656051',
   },
+  {
+    id: 8,
+    title: 'ARTICLE',
+    subtext: 'Girls Like Me',
+    description:
+      'A short read about growing up between brothers.',
+    image: '/images/medium-post.png',
+    link: 'https://medium.com/@abiodunpeace8/girls-like-me-620d220a1115',
+  },
 ];
