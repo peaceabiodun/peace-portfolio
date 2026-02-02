@@ -7,7 +7,9 @@ import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import { HiArrowLongRight } from 'react-icons/hi2';
 import { motion } from 'framer-motion';
+import { JsonLd } from '@/components/JsonLd';
 
+const SITE_URL = "https://www.peaceabiodun.com";
 export default function Home() {
   const [isHovering, setIsHovering] = useState(false);
   const [selectedProjectIndex, setSelectedProjectIndex] = useState<
@@ -17,6 +19,52 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showControls, setShowControls] = useState(true);
   const hideControlsTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Peace Abiodun",
+    url: SITE_URL,
+    jobTitle: "Senior Frontend Engineer",
+    description:
+      "Senior Frontend Engineer specializing in React, Next.js, TypeScript, JavaScript, UI systems, and performance.",
+    sameAs: [
+      "https://www.linkedin.com/in/peaceabiodun/",
+      "https://github.com/peaceabiodun",
+      "https://x.com/_fine_peace",
+    ],
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "Frontend Architecture",
+      "Web Performance",
+      "Design Systems",
+      "UI Engineering",
+      "Agile Project Delivery",
+      "Problem Solving",
+      "Strategic Planning",
+      "AI",
+      "Jira",
+      "Youtrack",
+      "Notion",
+      "Linear",
+    ],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: SITE_URL,
+    name: "Peace Abiodun",
+    description:
+      "Portfolio website for Peace Abiodun, a Senior Frontend Engineer specializing in React, Next.js, TypeScript, JavaScript, UI systems, and performance.",
+    publisher: {
+      "@type": "Person",
+      name: "Peace Abiodun",
+    },
+  };
 
   // Function to start the timer that hides controls after 3 seconds
   const startHideControlsTimer = () => {
@@ -95,6 +143,9 @@ export default function Home() {
     };
   }, []);
   return (
+    <>
+      <JsonLd id="person-schema" data={personSchema} />
+      <JsonLd id="website-schema" data={websiteSchema} />
     <main className='bg-[#0A0A0A] w-full h-full min-h-screen'>
       <div className='max-w-[1000px] mx-auto p-5 md:p-10'>
         <header className='w-full text-[#FFFFFFB2] flex gap-5 items-center justify-between'>
@@ -393,6 +444,7 @@ export default function Home() {
       </div>
 
       <Footer />
-    </main>
+      </main>
+      </>
   );
 }
