@@ -80,6 +80,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <meta name="google-site-verification" content="NJW_rRkubD0pSm0pYAzkFbnyH0uJFoCAtCD7_at7GC4" />
       <body className={`${urbanist.variable} antialiased`}>{children}</body>
     </html>
   );
