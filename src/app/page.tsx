@@ -290,7 +290,10 @@ export default function Home() {
                     onMouseEnter={() => setSelectedProjectIndex(index)}
                     onMouseLeave={() => setSelectedProjectIndex(null)}
                   >
-                    <div className='border-b-[0.5px] border-b-[#FFFFFF75] hover:border-b-[#be06ec] transition-all duration-300 w-full h-[350px] sm:h-[500px] relative'>
+                    <div
+                      onClick={() => setSelectedProjectIndex(index)}
+                      className='border-b-[0.5px] border-b-[#FFFFFF75] hover:border-b-[#be06ec] transition-all duration-300 w-full h-[350px] sm:h-[500px] relative'
+                    >
                       <img
                         src={item.image}
                         alt={item.title}
