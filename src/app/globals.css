@@ -61,3 +61,13 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* swiper component  */
+
+.swiper-pagination-bullet {
+  background: #ffffff !important;
+}
+
+/* .swiper-pagination-bullet-active {
+  background: #be06ec !important;
+} */
