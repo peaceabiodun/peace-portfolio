@@ -2,7 +2,7 @@
 
 import Footer from '@/components/footer/page';
 import VennDiagram from '@/components/venn-diagram/page';
-import { projectsData } from '@/utils/data';
+import { articlesData, projectsData } from '@/utils/data';
 import Link from 'next/link';
 import { useRef, useState, useEffect } from 'react';
 import { HiArrowLongRight } from 'react-icons/hi2';
@@ -189,11 +189,11 @@ export default function Home() {
           </section>
 
           <section>
-            <div className='border-[0.5px] border-[#FFFFFF75] w-full h-[380px] md:h-[620px] relative'>
+            <div className='border-[0.5px] border-[#FFFFFF75] w-full h-[380px] md:h-[620px] relative rounded-[70px] sm:rounded-[100px]'>
               <img
                 src='/images/author1.png'
                 alt='poster'
-                className='object-cover object-center w-full h-full'
+                className='object-cover object-center w-full h-full rounded-[70px] sm:rounded-[100px]'
               />
             </div>
             {/* <div
@@ -253,7 +253,7 @@ export default function Home() {
                 href='mailto:abiodunpeace8@gmail.com'
                 rel='noopener noreferrer'
                 target='_blank'
-                className='mt-5 border-[0.5px] border-[#ffffff75] p-2 text-[#ffffff] text-sm w-[200px] h-[36px] cursor-pointer text-center hover:bg-[#773a779a] transition-all duration-300 font-bold'
+                className='mt-5 border border-[#ffffff75] p-2 text-[#ffffff] text-sm w-[200px] h-[36px] cursor-pointer text-center hover:bg-[#773a779a] transition-all duration-300 font-bold'
               >
                 CONTACT ME
               </a>
@@ -283,7 +283,7 @@ export default function Home() {
               {projectsData.map((item, index) => (
                 <SwiperSlide
                   key={index}
-                  className=' border-[0.5px] border-[#FFFFFF75] hover:border-[#be06ec] transition-all duration-300 pb-6  '
+                  className=' border-[0.5px] border-[#FFFFFF75] hover:border-[#be06ec] rounded-[70px] sm:rounded-[100px] transition-all duration-300 pb-6  '
                 >
                   <div
                     className='relative'
@@ -292,12 +292,12 @@ export default function Home() {
                   >
                     <div
                       onClick={() => setSelectedProjectIndex(index)}
-                      className='border-b-[0.5px] border-b-[#FFFFFF75] hover:border-b-[#be06ec] transition-all duration-300 w-full h-[350px] sm:h-[500px] relative'
+                      className=' transition-all duration-300 w-full h-[350px] sm:h-[500px] relative'
                     >
                       <img
                         src={item.image}
                         alt={item.title}
-                        className='w-full h-full object-cover object-center brightness-80'
+                        className='w-full h-full object-cover object-center rounded-b-[40px] rounded-t-[70px] sm:rounded-t-[100px] brightness-80'
                       />
                     </div>
                     {selectedProjectIndex === index && (
@@ -305,9 +305,9 @@ export default function Home() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
-                        className='absolute inset-0 bg-[#0a0a0ac7] text-[#ffffff] z-10 '
+                        className='absolute inset-0 bg-[#0a0a0ac7] text-[#ffffff] z-10 rounded-b-[40px] rounded-t-[70px] sm:rounded-t-[100px]'
                       >
-                        <div className='p-3 flex flex-col justify-end w-full h-full max-w-[370px]'>
+                        <div className='px-3 py-6 flex flex-col justify-end w-full h-full max-w-[370px]'>
                           <p className=' text-base font-bold'>{item.subtext}</p>
                           <p className=' text-[#FFFFFFB2] text-sm mt-2'>
                             {item.description}
@@ -343,27 +343,77 @@ export default function Home() {
           <section>
             <div className='text-[#FFFFFF] text-sm md:text-lg mt-12 flex items-center justify-center gap-4 cursor-pointer transition-all duration-400 ease-in'>
               <h4 className='hover:line-through hover:text-[#be06ec] transition-all duration-300'>
+                MY ARTICLES
+              </h4>
+            </div>
+
+            <Swiper
+              pagination={{
+                dynamicBullets: true,
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className='mySwiper mt-8'
+            >
+              {articlesData.map((item, index) => (
+                <SwiperSlide
+                  key={index}
+                  className=' border-[0.5px] border-[#FFFFFF75] rounded-[70px] sm:rounded-[100px] hover:border-[#be06ec] transition-all duration-300 pb-6  '
+                >
+                  <div
+                    className='relative'
+                    onMouseEnter={() => setSelectedProjectIndex(index)}
+                    onMouseLeave={() => setSelectedProjectIndex(null)}
+                  >
+                    <div
+                      onClick={() => setSelectedProjectIndex(index)}
+                      className='border-b-[0.5px] border-b-[#FFFFFF75] hover:border-b-[#be06ec] rounded-b-[40px] transition-all duration-300 w-full h-[350px] sm:h-[500px] relative'
+                    >
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className='w-full h-full object-cover object-center brightness-80 rounded-b-[40px] rounded-t-[70px] sm:rounded-t-[100px]'
+                      />
+                    </div>
+                  </div>
+                  <div
+                    onClick={() => window.open(item.link, '_blank')}
+                    className=' text-[#ffffff] flex items-center justify-center gap-2 mt-2 hover:line-through hover:text-[#be06ec] transition-all duration-300 cursor-pointer py-3 px-5 '
+                  >
+                    <h4 className='text-sm sm:text-base text-center uppercase'>
+                      {item.title}
+                    </h4>
+                    <HiArrowLongRight size={14} />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </section>
+
+          <section>
+            <div className='text-[#FFFFFF] text-sm md:text-lg mt-12 flex items-center justify-center gap-4 cursor-pointer transition-all duration-400 ease-in'>
+              <h4 className='hover:line-through hover:text-[#be06ec] transition-all duration-300'>
                 WHAT I AM READING CURRENTLY
               </h4>
             </div>
 
             <motion.div className=' mt-8'>
               <div className='flex w-full'>
-                <div className='w-[50%] h-[200px] sm:h-[370px] transition-all duration-300 relative border-[0.5px] border-[#FFFFFF75]'>
+                <div className='w-[50%] h-[200px] sm:h-[370px] transition-all duration-300 relative border-[0.5px] border-[#FFFFFF75] rounded-tl-[70px] sm:rounded-tl-[100px]'>
                   <img
                     src='/images/book2.png'
                     alt='book2'
-                    className='w-full h-full object-contain object-center'
+                    className='w-full h-full object-contain object-center rounded-tl-[70px] sm:rounded-tl-[100px]'
                   />
-                  <div className='absolute inset-0 bg-[#be06ec2d] ' />
+                  <div className='absolute inset-0 bg-[#be06ec2d] rounded-tl-[70px] sm:rounded-tl-[100px]' />
                 </div>
-                <div className='w-[50%] h-[200px] sm:h-[370px] transition-all duration-300 relative border-[0.5px] border-[#FFFFFF75]'>
+                <div className='w-[50%] h-[200px] sm:h-[370px] transition-all duration-300 relative border-[0.5px] border-[#FFFFFF75] rounded-tr-[70px] sm:rounded-tr-[100px]'>
                   <img
                     src='/images/book3.png'
                     alt='book3'
-                    className='w-full h-full object-contain object-center'
+                    className='w-full h-full object-contain object-center rounded-tr-[70px] sm:rounded-tr-[100px]'
                   />
-                  <div className='absolute inset-0 bg-[#be06ec2d] ' />
+                  <div className='absolute inset-0 bg-[#be06ec2d] rounded-tr-[70px] sm:rounded-tr-[100px]' />
                 </div>
               </div>
               <a
@@ -385,7 +435,7 @@ export default function Home() {
 
               <div className='grid grid-cols-2 w-full'>
                 <a
-                  href='https://open.substack.com/pub/themarathon0612/p/clarity-of-thinking?r=1v2kx8&utm_campaign=post&utm_medium=web'
+                  href='https://open.substack.com/pub/bitsofwonder/p/repetition-is-glorious?utm_campaign=post-expanded-share&utm_medium=web'
                   rel='noopener noreferrer'
                   target='_blank'
                   className='w-full h-[200px] sm:h-[370px] bg-[#be06ec0c] hover:bg-[#be06ec17] transition-all duration-300 flex flex-col items-center justify-center border-[0.5px] border-[#FFFFFF75] p-2 cursor-pointer'
@@ -394,23 +444,24 @@ export default function Home() {
                     Substack
                   </p>
                   <p className='sm:text-sm text-xs font-medium my-1 flex items-center justify-center text-center gap-2 text-[#FFFFFFB2]'>
-                    CLARITY OF THINKING
+                    REPETITION IS GLORIOUS
                   </p>
                   <p className='text-[10px] text-[#FFFFFFB2] underline underline-offset-4'>
                     Read
                   </p>
                 </a>
                 <a
-                  href='https://medium.com/@abiodunpeace8/girls-like-me-620d220a1115'
+                  href='https://open.substack.com/pub/fishinapool/p/treating-heart-problems-like-head?utm_campaign=post-expanded-share&utm_medium=web'
                   rel='noopener noreferrer'
                   target='_blank'
                   className='w-full h-[200px] sm:h-[370px] bg-[#be06ec1c] hover:bg-[#be06ec38] transition-all duration-300 flex flex-col items-center justify-center border-[0.5px] border-[#FFFFFF75] p-2 cursor-pointer'
                 >
                   <p className='sm:text-base text-sm font-bold text-[#ffffff] text-center'>
-                    Medium
+                    Substack
                   </p>
                   <p className='sm:text-sm text-xs font-medium my-1 flex items-center justify-center text-center gap-2 text-[#FFFFFFB2]'>
-                    GIRLS LIKE ME
+                    YOU'RE STUCK BECAUSE YOU TREAT HEART PROBLEMS AS HEAD
+                    PROBLEMS
                   </p>
                   <p className='text-[10px] text-[#FFFFFFB2] underline underline-offset-4'>
                     Read
@@ -418,16 +469,16 @@ export default function Home() {
                 </a>
               </div>
               <a
-                href='https://read.isabelunraveled.com/p/confidence?utm_campaign=post&utm_medium=web'
+                href='https://open.substack.com/pub/mindmine/p/make-things?utm_campaign=post-expanded-share&utm_medium=post%20viewer'
                 rel='noopener noreferrer'
                 target='_blank'
-                className='w-full h-[200px] sm:h-[370px]  bg-[#be06ec38] hover:bg-[#be06ec56] transition-all duration-300 flex flex-col items-center justify-center border-[0.5px] border-[#FFFFFF75] p-2 cursor-pointer'
+                className='w-full h-[200px] sm:h-[370px]  bg-[#be06ec38] hover:bg-[#be06ec56] rounded-b-[70px] sm:rounded-b-[100px] transition-all duration-300 flex flex-col items-center justify-center border-[0.5px] border-[#FFFFFF75] p-2 cursor-pointer'
               >
                 <p className='sm:text-base text-sm font-bold text-[#ffffff] text-center'>
                   Substack
                 </p>
                 <p className='sm:text-sm text-xs font-medium my-1 flex items-center justify-center text-center gap-2 text-[#FFFFFFB2]'>
-                  CONFIDENCE COMES FROM TAKING CARE OF YOURSELF
+                  MAKE THINGS WITH YOUR HANDS
                 </p>
                 <p className='text-[10px] text-[#FFFFFFB2] underline underline-offset-4'>
                   Read

@@ -81,7 +81,7 @@ const labelData = [
     cx: '65%',
     cy: '35%',
     text: '',
-    area: 'AI, Strategic Planning',
+    area: 'AI, Prompt Engineering',
     mobileMarginClasses: 'mt-2',
   },
   {
@@ -179,7 +179,7 @@ const VennDiagram = () => {
                     </div>
                   )}
                 </div>
-              )
+              ),
             )}
           </div>
         </div>

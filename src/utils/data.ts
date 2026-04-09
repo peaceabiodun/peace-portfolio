@@ -35,18 +35,9 @@ export const projectsData = [
     image: '/images/reposition.png',
     link: 'https://www.re-position.co/',
   },
-  {
-    id: 5,
-    title: 'FOURTIDE',
-    subtext: 'Global Store for Mens Clothing',
-    description:
-      'Full-stack development for the brand’s online presence — from design and frontend to backend, analytics, and ongoing maintenance.',
-    image: '/images/fourtide.png',
-    link: 'https://www.fourtide.com/',
-  },
 
   {
-    id: 6,
+    id: 5,
     title: 'FOOD COURT',
     subtext: 'Online Restaurant',
     description:
@@ -54,22 +45,25 @@ export const projectsData = [
     image: '/images/foodcourt.png',
     link: 'https://www.getfoodcourt.com/',
   },
+];
+
+export const articlesData = [
   {
-    id: 7,
-    title: 'ARTICLE',
-    subtext: 'Why Typescript is better than JavaScript',
-    description:
-      'An article I authored explaining why TypeScript outperforms JavaScript. A quick 3-minute read.',
-    image: '/images/ts.png',
-    link: 'https://medium.com/@abiodunpeace8/why-typescript-is-better-than-javascript-13126c656051',
+    id: 1,
+    title: 'Why Are You Terrified of Singleness?',
+    image: '/images/article2.png',
+    link: 'https://medium.com/@abiodunpeace8/why-are-you-terrified-of-singleness-3db6694ba862',
   },
   {
-    id: 8,
-    title: 'ARTICLE',
-    subtext: 'Girls Like Me',
-    description:
-      'A short read about growing up between brothers.',
+    id: 2,
+    title: 'Girls Like Me',
     image: '/images/medium-post.png',
     link: 'https://medium.com/@abiodunpeace8/girls-like-me-620d220a1115',
+  },
+  {
+    id: 3,
+    title: 'Why Typescript is better than JavaScript',
+    image: '/images/ts.png',
+    link: 'https://medium.com/@abiodunpeace8/why-typescript-is-better-than-javascript-13126c656051',
   },
 ];
