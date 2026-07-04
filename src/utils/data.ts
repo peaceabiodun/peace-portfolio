@@ -1,21 +1,21 @@
 export const projectsData = [
   {
     id: 1,
-    title: 'ALPHA NEXT TECH',
-    subtext: 'Software Development Company, AI Agents',
-    description:
-      "I'm a Senior Frontend Engineer at Alpha Next Tech. I joined as the very first employee, building the company brick by brick alongside the founder Ose. I’ve led the development of multiple products and helped shape the company’s foundation.",
-    image: '/images/ant.png',
-    link: 'https://www.alphanexttech.com/',
-  },
-  {
-    id: 2,
     title: 'TIGHT LINE',
     subtext: 'Software Development Company, DevOps, AI.',
     description:
       'As a Frontend Engineer at Tight Line, I collaborate with the engineering team to design and build a range of digital products for the company.',
     image: '/images/tightline.png',
     link: 'https://tightlinesoftware.com/',
+  },
+  {
+    id: 2,
+    title: 'ALPHA NEXT TECH',
+    subtext: 'Software Development Company, AI Agents',
+    description:
+      "I'm a Senior Frontend Engineer at Alpha Next Tech. I joined as the very first employee, building the company brick by brick alongside the founder Ose. I’ve led the development of multiple products and helped shape the company’s foundation.",
+    image: '/images/ant.png',
+    link: 'https://www.alphanexttech.com/',
   },
   {
     id: 3,
@@ -50,18 +50,24 @@ export const projectsData = [
 export const articlesData = [
   {
     id: 1,
+    title: 'Today Has Never Happened Before',
+    image: '/images/flower-shop.jpg',
+    link: 'https://open.substack.com/pub/writteninpeace/p/today-has-never-happened-before?r=1v2kx8&utm_campaign=post&utm_medium=web',
+  },
+  {
+    id: 2,
     title: 'Why Are You Terrified of Singleness?',
     image: '/images/article2.png',
     link: 'https://medium.com/@abiodunpeace8/why-are-you-terrified-of-singleness-3db6694ba862',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Girls Like Me',
     image: '/images/medium-post.png',
     link: 'https://medium.com/@abiodunpeace8/girls-like-me-620d220a1115',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Why Typescript is better than JavaScript',
     image: '/images/ts.png',
     link: 'https://medium.com/@abiodunpeace8/why-typescript-is-better-than-javascript-13126c656051',

@@ -181,10 +181,8 @@ export default function Home() {
             <h1 className='text-[#FFFFFF]'>PEACE ABIODUN</h1>
             <h2 className='text-[#FFFFFF] mt-2'>Senior Frontend Engineer</h2>
             <p className='text-[#FFFFFFB2] mt-1'>
-              " I write code the way I keep my word: clean and reliable.
-            </p>
-            <p className='text-[#e1a4f0] mt-1'>
-              I am the engineer you call when 'WORKING' isn't enough."
+              "I build things that work —{' '}
+              <span className='text-[#e1a4f0] ml-1'>and things that last.</span>
             </p>
           </section>
 
@@ -358,7 +356,7 @@ export default function Home() {
               {articlesData.map((item, index) => (
                 <SwiperSlide
                   key={index}
-                  className=' border-[0.5px] border-[#FFFFFF75] rounded-[70px] sm:rounded-[100px] hover:border-[#be06ec] transition-all duration-300 pb-6  '
+                  className=' border-[0.5px] border-[#FFFFFF75] rounded-[70px] sm:rounded-[100px] hover:border-[#be06ec] transition-all duration-300 pb-8  '
                 >
                   <div
                     className='relative'
@@ -401,7 +399,7 @@ export default function Home() {
               <div className='flex w-full'>
                 <div className='w-[50%] h-[200px] sm:h-[370px] transition-all duration-300 relative border-[0.5px] border-[#FFFFFF75] rounded-tl-[70px] sm:rounded-tl-[100px]'>
                   <img
-                    src='/images/book2.png'
+                    src='/images/book1.png'
                     alt='book2'
                     className='w-full h-full object-contain object-center rounded-tl-[70px] sm:rounded-tl-[100px]'
                   />
@@ -409,7 +407,7 @@ export default function Home() {
                 </div>
                 <div className='w-[50%] h-[200px] sm:h-[370px] transition-all duration-300 relative border-[0.5px] border-[#FFFFFF75] rounded-tr-[70px] sm:rounded-tr-[100px]'>
                   <img
-                    src='/images/book3.png'
+                    src='/images/book2.png'
                     alt='book3'
                     className='w-full h-full object-contain object-center rounded-tr-[70px] sm:rounded-tr-[100px]'
                   />
@@ -417,7 +415,7 @@ export default function Home() {
                 </div>
               </div>
               <a
-                href='https://open.substack.com/pub/fishinapool/p/chemistry-needs-contact?utm_campaign=post&utm_medium=web'
+                href='https://thediaryofanadultteenager.substack.com/p/weve-stopped-asking-good-questions'
                 rel='noopener noreferrer'
                 target='_blank'
                 className='w-full h-[200px] sm:h-[370px]  bg-[#be06ec38] hover:bg-[#be06ec56] transition-all duration-300 flex flex-col items-center justify-center border-[0.5px] border-[#FFFFFF75] p-2 cursor-pointer'
@@ -426,7 +424,7 @@ export default function Home() {
                   Substack
                 </p>
                 <p className='sm:text-sm text-xs font-medium my-1 flex items-center justify-center text-center gap-2 text-[#FFFFFFB2]'>
-                  CHEMISTRY NEEDS CONTACT
+                  WE&apos;VE STOPPED ASKING GOOD QUESTIONS
                 </p>
                 <p className='text-[10px] text-[#FFFFFFB2] underline underline-offset-4'>
                   Read
@@ -451,7 +449,7 @@ export default function Home() {
                   </p>
                 </a>
                 <a
-                  href='https://open.substack.com/pub/fishinapool/p/treating-heart-problems-like-head?utm_campaign=post-expanded-share&utm_medium=web'
+                  href='https://xygort.substack.com/p/the-ninth-letter-how-to-find-your'
                   rel='noopener noreferrer'
                   target='_blank'
                   className='w-full h-[200px] sm:h-[370px] bg-[#be06ec1c] hover:bg-[#be06ec38] transition-all duration-300 flex flex-col items-center justify-center border-[0.5px] border-[#FFFFFF75] p-2 cursor-pointer'
@@ -460,8 +458,7 @@ export default function Home() {
                     Substack
                   </p>
                   <p className='sm:text-sm text-xs font-medium my-1 flex items-center justify-center text-center gap-2 text-[#FFFFFFB2]'>
-                    YOU'RE STUCK BECAUSE YOU TREAT HEART PROBLEMS AS HEAD
-                    PROBLEMS
+                    THE NINTH LETTER: HOW TO FIND YOUR SPARK AGAIN
                   </p>
                   <p className='text-[10px] text-[#FFFFFFB2] underline underline-offset-4'>
                     Read
