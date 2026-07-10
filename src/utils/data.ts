@@ -50,24 +50,30 @@ export const projectsData = [
 export const articlesData = [
   {
     id: 1,
+    title: 'The Pumpkin in the Jug',
+    image: '/images/post-img.png',
+    link: 'https://open.substack.com/pub/writteninpeace/p/the-pumpkin-in-the-jug?r=1v2kx8&utm_campaign=post&utm_medium=web',
+  },
+  {
+    id: 2,
     title: 'Today Has Never Happened Before',
     image: '/images/flower-shop.jpg',
     link: 'https://open.substack.com/pub/writteninpeace/p/today-has-never-happened-before?r=1v2kx8&utm_campaign=post&utm_medium=web',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Why Are You Terrified of Singleness?',
     image: '/images/article2.png',
     link: 'https://medium.com/@abiodunpeace8/why-are-you-terrified-of-singleness-3db6694ba862',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Girls Like Me',
     image: '/images/medium-post.png',
     link: 'https://medium.com/@abiodunpeace8/girls-like-me-620d220a1115',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Why Typescript is better than JavaScript',
     image: '/images/ts.png',
     link: 'https://medium.com/@abiodunpeace8/why-typescript-is-better-than-javascript-13126c656051',
