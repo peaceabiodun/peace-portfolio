@@ -181,8 +181,8 @@ export default function Home() {
             <h1 className='text-[#FFFFFF]'>PEACE ABIODUN</h1>
             <h2 className='text-[#FFFFFF] mt-2'>Senior Frontend Engineer</h2>
             <p className='text-[#FFFFFFB2] mt-1'>
-              "I build things that work —{' '}
-              <span className='text-[#e1a4f0] ml-1'>and things that last.</span>
+              "I make the complex feel beautifully
+              <span className='text-[#e1a4f0] ml-1'> simple.</span>
             </p>
           </section>
 
